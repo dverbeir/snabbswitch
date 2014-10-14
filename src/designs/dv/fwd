@@ -11,6 +11,7 @@ config.app(c, "nic2", Intel82599, [[{pciaddr = "0000:07:00.0"}]])
 config.link(c, "nic1.tx -> nic2.rx");
 
 engine.configure(c)
+buffer.preallocate(10000)
 
 old_packets = 0
 
